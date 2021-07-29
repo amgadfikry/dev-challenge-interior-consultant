@@ -36,9 +36,9 @@
 
 ![screenshot](https://github.com/amgadfikry/dev-challenge-interior-consultant/blob/main/screencapture-127-0-0-1-5500-index-html-2021-07-29-11_22_23.png)
 
-(https://github.com/amgadfikry/dev-challenge-interior-consultant/blob/main/screencapture-127-0-0-1-5500-index-html-2021-07-29-11_21_15.png)
+![screenshot](https://github.com/amgadfikry/dev-challenge-interior-consultant/blob/main/screencapture-127-0-0-1-5500-index-html-2021-07-29-11_21_15.png)
 
-(https://github.com/amgadfikry/dev-challenge-interior-consultant/blob/main/screencapture-127-0-0-1-5500-index-html-2021-07-29-11_21_44.png)
+![screenshot](https://github.com/amgadfikry/dev-challenge-interior-consultant/blob/main/screencapture-127-0-0-1-5500-index-html-2021-07-29-11_21_44.png)
 
 
 - challenge live demo is on github website
