@@ -1,0 +1,255 @@
+/*add root style*/
+:root{
+    font-size: calc( 0.5em + 1vw);
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+/*start media query of responsive*/
+@media (min-width:768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+.container{
+    margin: auto;
+    padding:0 15px;
+}
+/*end media query of responsive*/
+
+/*start navbar style*/
+body{
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    position: relative;
+}
+header .logo{
+    font-weight: 400;
+    border: 2px solid white;
+    padding: 10px 20px;
+}
+header .navbar{
+    margin-left: auto;
+}
+header .navbar ul{
+    list-style-type: none;
+    display: flex;
+}
+header .navbar ul li{
+    padding: 10px 0;
+    transition: 0.1s;
+    border-bottom: 0px solid white;
+}
+header .navbar ul li:not(:last-child){
+    margin-right: 30px;
+}
+header .navbar ul li.active{
+    border-bottom: 1px solid white;
+}
+header .navbar ul li:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.menu{
+    width:60px;
+    height: 40px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+.bar{
+    width: 100%;
+    height: 8px;
+    background-color: white;
+    border-radius: 5px;
+    transition: top 0.5s 0.5s, bottom 0.5s 0.5s, width 0.5s 0.5s, transform 0.5s ;
+    position: relative;
+    transform-origin: center;
+    margin: auto;
+}
+.one{
+    top: 0;
+}
+.three{
+    bottom: 0;
+}
+.bar:not(:last-child){
+    margin-bottom: 8px;
+}
+.menu .one-active{
+    top:16px;
+    transform: rotate(45deg);
+    transition: top 0.5s , transform 0.5s 0.5s;
+}
+.menu .two-active{
+    width: 0;
+    transition: width 0.5s;
+}
+.menu .three-active{
+    bottom: 16px;
+    transform: rotate(-45deg);
+    transition: bottom 0.5s,transform 0.5s 0.5s;
+}
+@media (max-width:767px){
+    .menu{
+        display: block;
+        margin-left: auto;
+        transform: scale(0.8);
+    }
+    header .navbar{
+        position: absolute;
+        background-color: rgb(48, 48, 48);
+        padding: 20px 30px;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 60px;
+        transform-origin: top;
+        transition: 0.5s;
+        transform: scaleY(0);
+        z-index: 3;
+    }
+    header .navbar.active{
+        transform: scaleY(1);
+    }
+    header .navbar ul{
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+    }
+    header .navbar ul li:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+/*end navbar style*/
+
+/*start main style*/
+section .container{
+    padding: 50px 10px ;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+section article{
+    flex:1;
+    padding: 10px 30px;
+}
+section article h3{
+    font-size: 2rem;
+    font-weight: 700;
+}
+section article p {
+    font-weight: 400;
+    margin:30px 0 ;
+}
+section article a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
+}
+section .photo{
+    flex:2;
+    position: relative;
+    padding: 15px;
+}
+section .photo img{
+    max-width: 100%;
+    height: auto;
+}
+section .photo .box{
+    background-color: rgb(48, 48, 48);
+    box-shadow: 0px 5px 9px 1px rgb(26, 25, 25);
+    width: 60%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: -80px;
+    right:40px;
+}
+section .photo .box .head{
+    display: flex;
+    align-items: center;
+}
+section .photo .box .head .person{
+    margin-right: 15px;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #777;
+}
+section .photo .box .head h4{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+section .photo .box .head p{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+section .photo .box .para{
+    padding: 20px 10px;
+    width: 70%;
+    font-weight: 600;
+}
+@media (max-width:767px){
+    section .container{
+        flex-direction: column;
+    }
+    section article{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    section .photo{
+        flex: 1;
+    }
+    section .photo .box{
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        bottom: -50px;
+    }
+    section .photo .box .para{
+        padding: 10px;
+    }
+}
+/*end main style*/
+
+/*start footer*/
+footer{
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 30px 10px 10px;
+}
+footer a{
+    color: violet;
+}
+/*end footer*/
+
+
